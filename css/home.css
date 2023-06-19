@@ -1,0 +1,138 @@
+
+.home{
+    min-height: 70vh;
+    background:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(../images/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ 
+ .home .content{
+    text-align: center;
+    width: 60rem;
+ }
+ 
+ .home .content h3{
+    font-size: 5.5rem;
+    color:var(--white);
+    text-transform: uppercase;
+ }
+ 
+ .home .content p{
+    font-size:1.8rem;
+    color:var(--light-white);
+    padding:1rem 0;
+    line-height: 1.5;
+ }
+ 
+ .products .box-container{
+    max-width: 1200px;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    align-items: flex-start;
+    gap:1.5rem;
+    justify-content: center;
+ }
+ 
+ .products .box-container .box{
+    border-radius: .5rem;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    padding:2rem;
+    text-align: center;
+    border:var(--border);
+    position: relative;
+ }
+ 
+ .products .box-container .box .image{
+    height: 30rem;
+ }
+ 
+ .products .box-container .box .name{
+    padding:1rem 0;
+    font-size: 2rem;
+    color:var(--black);
+ }
+ 
+ .products .box-container .box .qty{
+    width: 100%;
+    padding:1.2rem 1.4rem;
+    border-radius: .5rem;
+    border:var(--border);
+    margin:1rem 0;
+    font-size: 2rem;
+ }
+ 
+ .products .box-container .box .price{
+    position: absolute;
+    top:1rem; left:1rem;
+    border-radius: .5rem;
+    padding:1rem;
+    font-size: 2.5rem;
+    color:var(--white);
+    background-color: var(--secondary-color);
+}
+
+
+ .about .flex{
+    max-width: 1200px;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+ }
+ 
+ .about .flex .image{
+    flex:1 1 40rem;
+ }
+ 
+ .about .flex .image img{
+    width: 100%;
+ }
+ 
+ .about .flex .content{
+    flex:1 1 40rem;
+    padding:2rem;
+    background-color: var(--light-bg);
+ }
+ 
+ .about .flex .content h3{
+    font-size: 3rem;
+    color:var(--black);
+    text-transform: uppercase;
+ }
+ 
+ .about .flex .content p{
+    padding:1rem 0;
+    line-height: 2;
+    font-size: 1.7rem;
+    color:var(--light-color);
+ }
+ 
+ .home-contact{
+    background-color: var(--black);
+ }
+ 
+ .home-contact .content{
+    max-width: 60rem;
+    text-align: center;
+    margin:0 auto;
+ }
+ 
+ .home-contact .content h3{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color:var(--white);
+ }
+ 
+ .home-contact .content p{
+    padding:1rem 0;
+    line-height: 1.5;
+    color:var(--light-white);
+    font-size: 1.7rem;
+ }
+ 
