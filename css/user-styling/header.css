@@ -1,0 +1,190 @@
+.header .header-1 {
+    background-color: var(--light-bg);
+    animation: fadeIn 0.5s ease-in-out;
+}
+.header .header-2 .flex .navbar-mobile {
+    display: none;
+}
+
+.header .header-2 .flex .icons #menu-btn-mobile {
+    display: inline-block;
+    font-size: 2.5rem;
+    color: var(--black);
+    cursor: pointer;
+    margin-left: 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.header .header-2 .flex .icons #menu-btn-mobile:hover {
+    color: var(--primary-color);
+}
+
+.header .header-2.active .navbar-mobile {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    text-align: center;
+    z-index: 1000;
+}
+
+.header .header-2.active .navbar-mobile a {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--light-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.header .header-2.active .navbar-mobile a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.header .header-1 .flex {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: slideFromTop 0.5s ease-in-out;
+}
+
+.header .header-2 {
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.header .header-2.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    animation: slideFromTop 0.3s ease-in-out;
+}
+
+.header .header-2 .flex {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header .header-1 .flex .share a {
+    font-size: 2.5rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+    transition: color 0.3s ease-in-out;
+}
+
+.header .header-1 .flex .share a:hover {
+    color: var(--primary-color);
+}
+
+.header .header-1 .flex p {
+    font-size: 2rem;
+    color: var(--light-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.header .header-1 .flex p a {
+    color: var(--primary-color);
+}
+
+.header .header-1 .flex p a:hover {
+    text-decoration: underline;
+}
+
+.header .header-2 .flex .logo {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.header .header-2 .flex .navbar a {
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: var(--light-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.header .header-2 .flex .navbar a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.header .header-2 .flex .icons > * {
+    font-size: 2.5rem;
+    color: var(--black);
+    cursor: pointer;
+    margin-left: 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.header .header-2 .flex .icons > *:hover {
+    color: var(--primary-color);
+}
+
+#menu-btn {
+    display: none;
+}
+
+.header .header-2 .flex .user-box {
+    position: absolute;
+    top: 120%;
+    right: 2rem;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    padding: 2rem;
+    text-align: center;
+    width: 30rem;
+    display: none;
+    animation: fadeIn 0.2s linear;
+}
+
+.header .header-2 .flex .user-box.active {
+    display: inline-block;
+}
+
+.header .header-2 .flex .user-box p {
+    font-size: 2rem;
+    color: var(--light-color);
+    margin-bottom: 1.5rem;
+}
+
+.header .header-2 .flex .user-box p span {
+    color: var(--primary-color);
+}
+
+.header .header-2 .flex .user-box .delete-btn {
+    margin-top: 0;
+}
+
+@keyframes slideFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

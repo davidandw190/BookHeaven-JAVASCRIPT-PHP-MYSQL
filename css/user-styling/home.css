@@ -1,0 +1,421 @@
+.benefits-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.benefit {
+    flex-basis: 23%;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.benefit:hover {
+    transform: translateY(-5px);
+}
+
+.benefit i {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.benefit h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.benefit p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Styling for the Reviews section */
+.reviews {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.bubbles {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.bubble {
+    flex-basis: 30%;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #f6f6f6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.bubble:hover {
+    transform: translateY(-5px);
+}
+
+.rating {
+    margin-bottom: 20px;
+}
+
+.rating i {
+    color: #ff9800;
+}
+
+.review {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.customer {
+    font-size: 12px;
+    color: #888;
+}
+
+.home{
+    min-height: 70vh;
+    background:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(../../images/books.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+.home .content{
+    text-align: center;
+    width: 60rem;
+}
+
+.home .content h3{
+    font-size: 5.5rem;
+    color:var(--white);
+    text-transform: uppercase;
+}
+
+.home .content p{
+    font-size:1.8rem;
+    color:var(--light-white);
+    padding:1rem 0;
+    line-height: 1.5;
+}
+
+
+.about {
+    padding: 50px;
+    background-color: #f2f2f2;
+    animation: fadeIn 1s ease;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image img {
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+    animation: slideFromLeft 1s ease;
+}
+
+.content {
+    width: 60%;
+}
+
+.content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    animation: slideFromRight 1s ease;
+}
+
+.content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    animation: slideFromRight 1s ease;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+.home-contact{
+    background-color: var(--black);
+}
+
+.home-contact .content{
+    max-width: 60rem;
+    text-align: center;
+    margin:0 auto;
+}
+
+.home-contact .content h3{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color:var(--white);
+}
+
+.home-contact .content p{
+    padding:1rem 0;
+    line-height: 1.5;
+    color:var(--light-white);
+    font-size: 1.7rem;
+}
+
+.products .box-container {
+    max-width: 1200px;
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    align-items: flex-start;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.products .box-container .box {
+    border-radius: 0.5rem;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    text-align: center;
+    border: var(--border);
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.products .box-container .box:hover {
+    transform: translateY(-2px);
+}
+
+.products .box-container .box .image {
+    height: 30rem;
+}
+
+.products .box-container .box .name {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: var(--black);
+}
+
+.products .box-container .box .qty {
+    width: 30%;
+    padding: 1.2rem 1.4rem;
+    border-radius: 0.5rem;
+    border: var(--border);
+    margin: 1rem 1rem;
+    font-size: 1.5rem;
+}
+
+.products .box-container .box .price {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 2rem;
+    color: var(--white);
+    background-color: var(--secondary-color);
+}
+
+@media only screen and (max-width: 500px) {
+    .products .box-container .box {
+        padding: 1rem;
+    }
+
+    .products .box-container .box .qty {
+        font-size: 1rem;
+    }
+
+    .products .box-container .box .price {
+        font-size: 2rem;
+    }
+}
+
+
+
+/* Animation for scrollable product container */
+.scrollable-container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+    justify-content: center; /* Center the products */
+}
+
+.scrollable-products {
+    display: flex;
+}
+
+.box {
+    flex: 0 0 auto;
+    margin-right: 1rem;
+}
+
+.box:last-child {
+    margin-right: 0;
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* Optional: Styling for the scroll bar */
+.scrollable-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .home .content {
+        width: 90%;
+    }
+
+    .about .flex {
+        flex-direction: column;
+    }
+
+    .about .flex .image {
+        margin-bottom: 2rem;
+    }
+
+    .products .box-container .box {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* Adjustments for mobile devices */
+@media only screen and (max-width: 600px) {
+    .home .content {
+        width: 90%;
+        padding: 0 20px;
+    }
+
+    .home .content h3 {
+        font-size: 3rem;
+    }
+
+    .home .content p {
+        font-size: 1.4rem;
+    }
+
+    .about .flex {
+        flex-direction: column;
+    }
+
+    .about .flex .image {
+        max-width: 100%;
+    }
+
+    .about .flex .content {
+        padding: 2rem 0;
+    }
+
+    .about .flex .content h3 {
+        font-size: 2.5rem;
+    }
+
+    .about .flex .content p {
+        font-size: 1.4rem;
+    }
+
+    .products .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+    .products .box-container .box {
+        padding: 1rem;
+    }
+
+    .products .box-container .box .qty {
+        font-size: 1.6rem;
+    }
+
+    .products .box-container .box .price {
+        font-size: 2rem;
+    }
+
+    .benefits .benefit {
+        flex-basis: 100%;
+    }
+
+    .benefits .benefit h3 {
+        font-size: 1.8rem;
+    }
+
+    .benefits .benefit p {
+        font-size: 1.4rem;
+    }
+
+    .reviews .bubbles {
+        flex-direction: column;
+    }
+
+    .reviews .bubble {
+        flex-basis: 100%;
+    }
+
+    .reviews .bubble .rating i {
+        font-size: 2rem;
+    }
+
+    .reviews .bubble .review {
+        font-size: 1.4rem;
+    }
+
+    .reviews .bubble .customer {
+        font-size: 1.2rem;
+    }
+
+    .home-contact .content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-contact .content p {
+        font-size: 1.4rem;
+    }
+}
+
+
+

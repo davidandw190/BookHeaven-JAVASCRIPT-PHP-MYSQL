@@ -1,0 +1,485 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+:root {
+   --primary-color: #314962;
+   --secondary-color: #93233d;
+   --background-color: #f5f5f5;
+   --text-color: #131313;
+   --light-text-color: #a4a0a0;
+   --light-background-color: #f9f9f9;
+   --border-color: #ddd;
+   --box-shadow: 0 0.5rem 1rem rgba(3, 3, 3, 0.3);
+}
+
+* {
+   font-family: 'Rubik', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+   text-decoration: none;
+   transition: all 0.2s linear;
+}
+
+*::selection {
+   background-color: var(--primary-color);
+   color: var(--white);
+}
+
+*::-webkit-scrollbar {
+   height: 0.5rem;
+   width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+   background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+   background-color: var(--primary-color);
+}
+
+html {
+   font-size: 50%;
+   overflow-x: hidden;
+}
+
+body {
+   background-color: var(--background-color);
+}
+
+section {
+   padding: 3rem 2rem;
+}
+
+
+.title {
+   text-align: center;
+   margin-bottom: 2rem;
+   text-transform: uppercase;
+   color: var(--text-color);
+   font-size: 4rem;
+}
+
+.empty {
+   padding: 1.5rem;
+   text-align: center;
+   border: 1px solid var(--border-color);
+   background-color: var(--background-color);
+   color: darkred;
+   font-size: 2rem;
+}
+
+.btn,
+.option-btn,
+.delete-btn,
+.white-btn {
+   display: inline-block;
+   margin-top: 1rem;
+   padding: 1rem 3rem;
+   cursor: pointer;
+   color: var(--white);
+   font-size: 1.8rem;
+   border-radius: 0.5rem;
+   text-transform: capitalize;
+}
+
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover {
+   background-color: var(--primary-color);
+}
+
+.white-btn,
+.btn {
+   background-color: var(--primary-color);
+}
+
+.option-btn {
+   background-color: var(--secondary-color);
+}
+
+.delete-btn {
+   background-color: var(--secondary-color);
+}
+
+.white-btn:hover {
+   background-color: var(--background-color);
+   color: var(--text-color);
+}
+
+@keyframes fadeIn {
+   0% {
+      transform: translateY(1rem);
+      opacity: 0.2;
+   }
+}
+
+#menu-btn {
+   display: none;
+}
+
+.dashboard .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+   gap: 1.5rem;
+   max-width: 1200px;
+   margin: 0 auto;
+   align-items: flex-start;
+}
+
+.dashboard .box-container .box {
+   border-radius: 0.5rem;
+   padding: 2rem;
+   background-color: var(--background-color);
+   box-shadow: var(--box-shadow);
+   border: 1px solid var(--border-color);
+   text-align: center;
+}
+
+.dashboard .box-container .box h3 {
+   font-size: 5rem;
+   color: var(--text-color);
+}
+
+.dashboard .box-container .box p {
+   margin-top: 1.5rem;
+   padding: 1.5rem;
+   background-color: var(--light-background-color);
+   color: var(--primary-color);
+   font-size: 2rem;
+   border-radius: 0.5rem;
+   border: 1px solid var(--border-color);
+}
+
+.add-products form {
+   background-color: var(--background-color);
+   border-radius: 0.5rem;
+   padding: 2rem;
+   text-align: center;
+   box-shadow: var(--box-shadow);
+   border: 1px solid var(--border-color);
+   max-width: 50rem;
+   margin: 0 auto;
+}
+
+.add-products form h3 {
+   font-size: 2.5rem;
+   text-transform: uppercase;
+   color: var(--text-color);
+   margin-bottom: 1.5rem;
+}
+
+.add-products form .box {
+   width: 100%;
+   background-color: var(--light-background-color);
+   border-radius: 0.5rem;
+   margin: 1rem 0;
+   padding: 1.2rem 1.4rem;
+   color: var(--text-color);
+   font-size: 1.8rem;
+   border: 1px solid var(--border-color);
+}
+
+.show-products .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 30rem);
+   justify-content: center;
+   gap: 1.5rem;
+   max-width: 1200px;
+   margin: 0 auto;
+   align-items: flex-start;
+}
+
+.show-products {
+   padding-top: 0;
+}
+
+.show-products .box-container .box {
+   text-align: center;
+   padding: 2rem;
+   border-radius: 0.5rem;
+   border: 1px solid var(--border-color);
+   box-shadow: var(--box-shadow);
+   background-color: var(--background-color);
+}
+
+.show-products .box-container .box img {
+   height: 30rem;
+}
+
+.show-products .box-container .box .name {
+   padding: 1rem 0;
+   font-size: 2rem;
+   color: var(--text-color);
+}
+
+.show-products .box-container .box .price {
+   padding: 1rem 0;
+   font-size: 2.5rem;
+   color: var(--secondary-color);
+}
+
+.edit-product-form {
+   min-height: 100vh;
+   background-color: rgba(0, 0, 0, 0.7);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 2rem;
+   overflow-y: scroll;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1200;
+   width: 100%;
+}
+
+.edit-product-form form {
+   width: 50rem;
+   padding: 2rem;
+   text-align: center;
+   border-radius: 0.5rem;
+   background-color: var(--background-color);
+}
+
+.edit-product-form form img {
+   height: 25rem;
+   margin-bottom: 1rem;
+}
+
+.edit-product-form form .box {
+   margin: 1rem 0;
+   padding: 1.2rem 1.4rem;
+   border: 1px solid var(--border-color);
+   border-radius: 0.5rem;
+   background-color: var(--light-background-color);
+   font-size: 1.8rem;
+   color: var(--text-color);
+   width: 100%;
+}
+
+.orders .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 30rem);
+   justify-content: center;
+   gap: 1.5rem;
+   max-width: 1200px;
+   margin: 0 auto;
+   align-items: flex-start;
+}
+
+.orders .box-container .box {
+   background-color: var(--background-color);
+   padding: 2rem;
+   border: 1px solid var(--border-color);
+   box-shadow: var(--box-shadow);
+   border-radius: 0.5rem;
+}
+
+.orders .box-container .box p {
+   padding-bottom: 1rem;
+   font-size: 2rem;
+   color: var(--light-text-color);
+}
+
+.orders .box-container .box p span {
+   color: var(--primary-color);
+}
+
+.orders .box-container .box form {
+   text-align: center;
+}
+
+.orders .box-container .box form select {
+   border-radius: 0.5rem;
+   margin: 0.5rem 0;
+   width: 100%;
+   background-color: var(--light-background-color);
+   border: 1px solid var(--border-color);
+   padding: 1.2rem 1.4rem;
+   font-size: 1.8rem;
+   color: var(--text-color);
+}
+
+.users .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 30rem);
+   justify-content: center;
+   gap: 1.5rem;
+   max-width: 1200px;
+   margin: 0 auto;
+   align-items: flex-start;
+}
+
+.users .box-container .box {
+   background-color: var(--background-color);
+   padding: 2rem;
+   border: 1px solid var(--border-color);
+   box-shadow: var(--box-shadow);
+   border-radius: 0.5rem;
+   text-align: center;
+}
+
+.users .box-container .box p {
+   padding-bottom: 1.5rem;
+   font-size: 2rem;
+   color: var(--light-text-color);
+}
+
+.users .box-container .box p span {
+   color: var(--primary-color);
+}
+
+.users .box-container .box .delete-btn {
+   margin-top: 0;
+}
+
+.messages .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 35rem);
+   justify-content: center;
+   gap: 1.5rem;
+   max-width: 1200px;
+   margin: 0 auto;
+   align-items: flex-start;
+}
+
+.messages .box-container .box {
+   background-color: var(--background-color);
+   padding: 2rem;
+   border: 1px solid var(--border-color);
+   box-shadow: var(--box-shadow);
+   border-radius: 0.5rem;
+}
+
+.messages .box-container .box p {
+   padding-bottom: 1.5rem;
+   font-size: 2rem;
+   color: var(--light-text-color);
+   line-height: 1.5;
+}
+
+.messages .box-container .box p span {
+   color: var(--primary-color);
+}
+
+.messages .box-container .box form {
+   text-align: center;
+}
+
+.messages .box-container .box form textarea {
+   border-radius: 0.5rem;
+   margin: 0.5rem 0;
+   width: 100%;
+   background-color: var(--light-background-color);
+   border: 1px solid var(--border-color);
+   padding: 1.2rem 1.4rem;
+   font-size: 1.8rem;
+   color: var(--text-color);
+   resize: vertical;
+   min-height: 10rem;
+}
+
+@media (max-width: 768px) {
+   body {
+      font-size: 1.4rem;
+   }
+
+   .title {
+      font-size: 3rem;
+   }
+
+   .btn,
+   .option-btn,
+   .delete-btn,
+   .white-btn {
+      font-size: 1.6rem;
+   }
+
+   .message span {
+      font-size: 1.8rem;
+   }
+
+   .message i {
+      font-size: 2rem;
+   }
+
+   .dashboard .box-container {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+   }
+
+   .dashboard .box-container .box h3 {
+      font-size: 4rem;
+   }
+
+   .dashboard .box-container .box p {
+      font-size: 1.5rem;
+   }
+
+   .add-products form {
+      max-width: 40rem;
+   }
+
+   .add-products form h3 {
+      font-size: 2rem;
+   }
+
+   .add-products form .box {
+      font-size: 1.6rem;
+   }
+
+   .show-products .box-container {
+      grid-template-columns: repeat(auto-fit, 20rem);
+   }
+
+   .show-products .box-container .box img {
+      height: 20rem;
+   }
+
+   .show-products .box-container .box .name {
+      font-size: 1.8rem;
+   }
+
+   .show-products .box-container .box .price {
+      font-size: 2rem;
+   }
+
+   .edit-product-form form {
+      width: 40rem;
+   }
+
+   .edit-product-form form img {
+      height: 20rem;
+   }
+
+   .edit-product-form form .box {
+      font-size: 1.6rem;
+   }
+
+   .orders .box-container {
+      grid-template-columns: repeat(auto-fit, 25rem);
+   }
+
+   .orders .box-container .box p {
+      font-size: 1.8rem;
+   }
+
+   .users .box-container {
+      grid-template-columns: repeat(auto-fit, 25rem);
+   }
+
+   .users .box-container .box p {
+      font-size: 1.8rem;
+   }
+
+   .messages .box-container {
+      grid-template-columns: repeat(auto-fit, 30rem);
+   }
+
+   .messages .box-container .box p {
+      font-size: 1.8rem;
+   }
+}

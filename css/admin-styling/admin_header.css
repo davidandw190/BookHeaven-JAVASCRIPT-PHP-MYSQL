@@ -1,0 +1,342 @@
+
+/*!* General styling *!*/
+.header {
+    background-color: #f8f8f8;
+    padding: 8px 8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+}
+
+.logo span {
+    font-weight: 400;
+}
+
+.navbar a {
+    font-size: 14px;
+    color: #555;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons .fas {
+    font-size: 18px;
+    color: #333;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.user-box {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255);
+    text-align: right;
+    z-index: 999;
+}
+
+.user-box p {
+    font-size: 12px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.user-box span {
+    font-weight: 600;
+}
+
+.user-box .delete-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.user-box a {
+    color: #555;
+    text-decoration: none;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.message span {
+    margin-right: 10px;
+}
+
+.message i {
+    color: #fff;
+    cursor: pointer;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .icons {
+        margin-left: auto;
+    }
+
+    .user-box {
+        position: static;
+        display: block;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+
+.header .header-1 {
+    background-color: #f8f8f8;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.header .header-2 .flex .navbar-mobile {
+    display: none;
+}
+
+.header .header-2 .flex .icons #menu-btn-mobile {
+    display: inline-block;
+    font-size: 2.5rem;
+    color: #000;
+    cursor: pointer;
+    margin-left: 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.header .header-2 .flex .icons #menu-btn-mobile:hover {
+    color: #fff;
+}
+
+.header .header-2.active .navbar-mobile {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    z-index: 1000;
+}
+
+.header .header-2.active .navbar-mobile a {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+.header .header-2.active .navbar-mobile a:hover {
+    color: #f8f8f8;
+}
+
+.header .header-1 .flex {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: slideFromTop 0.5s ease-in-out;
+}
+
+.header .header-2 {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.header .header-2.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    animation: slideFromTop 0.3s ease-in-out;
+}
+
+.header .header-2 .flex {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header .header-1 .flex .share a {
+    font-size: 2.5rem;
+    margin-right: 1.5rem;
+    color: #000;
+
+}
+
+.header .header-1 .flex .share a:hover {
+    color: #fff;
+}
+
+.header .header-1 .flex p {
+    font-size: 2rem;
+    color: var(--primary-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.header .header-1 .flex p a {
+    color: var(--primary-color);
+}
+
+.header .header-1 .flex p a:hover {
+    text-decoration: underline;
+}
+
+.header .header-2 .flex .logo {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.header .header-2 .flex .navbar a {
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: white;
+
+}
+
+.header .header-2 .flex .navbar a:hover {
+    text-decoration: underline;
+}
+
+.header .header-2 .flex .icons > * {
+    font-size: 2.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 1.5rem;
+
+}
+
+#menu-btn {
+    display: none;
+}
+
+.header .header-2 .flex .user-box {
+    position: absolute;
+    top: 100%;
+    right: 2rem;
+    background-color: rgba(255, 255, 255);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #00000b;
+    padding: 2rem;
+    text-align: center;
+    width: 30rem;
+    display: none;
+    animation: fadeIn 0.2s linear;
+}
+
+.header .header-2 .flex .user-box.active {
+    display: inline-block;
+}
+
+.header .header-2 .flex .user-box p {
+    font-size: 2rem;
+    color: #00000b;
+    margin-bottom: 1.5rem;
+}
+
+.header .header-2 .flex .user-box p span {
+    color: var(--primary-color);
+}
+
+.header .header-2 .flex .user-box .delete-btn {
+    margin-top: 0;
+}
+
+@keyframes slideFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    background-color: #d02b1e;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.message span {
+    margin-right: 10px;
+}
+
+.message i {
+    color: #fff;
+    cursor: pointer;
+}
